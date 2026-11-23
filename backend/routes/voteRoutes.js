@@ -1,0 +1,1 @@
+const express=require('express');const {castVote,myHistory}=require('../controllers/voteController');const auth=require('../middleware/authMiddleware');const role=require('../middleware/roleMiddleware');const router=express.Router();router.post('/',auth,role('VOTER'),castVote);router.get('/history',auth,role('VOTER'),myHistory);module.exports=router;

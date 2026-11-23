@@ -1,0 +1,23 @@
+const express=require('express');
+const c=require('../controllers/adminController');
+const auth=require('../middleware/authMiddleware');
+const role=require('../middleware/roleMiddleware');
+const router=express.Router();
+router.use(auth,role('ADMIN'));
+router.get('/users',c.listUsers);
+router.get('/contact-messages',c.listContactMessages);
+router.get('/elections',c.listElections);
+router.post('/elections',c.createElection);
+router.put('/elections/:electionId',c.updateElection);
+router.delete('/elections/:electionId',c.deleteElection);
+router.get('/elections/:electionId/candidates',c.listCandidates);
+router.put('/candidates/:candidateId',c.updateCandidate);
+router.delete('/candidates/:candidateId',c.deleteCandidate);
+
+router.patch('/elections/:electionId/publish-results',c.publishResults);
+router.get('/parties',c.listParties);
+router.post('/parties',c.createParty);
+router.post('/elections/:electionId/candidates',c.createCandidate);
+router.get('/elections/:electionId/eligibility',c.listEligibility);
+router.post('/elections/:electionId/eligibility',c.assignEligibility);
+module.exports=router;

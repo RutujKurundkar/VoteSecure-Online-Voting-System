@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root { font-family: 'DM Sans', sans-serif; color: #e5edf8; background: #0b1120; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input, textarea { font: inherit; }
+button { cursor: pointer; }
+.app-shell { min-height: 100vh; background: radial-gradient(ellipse at 50% 0%, #17264a 0, #0b1120 55%); }
+.topbar { max-width: 1150px; margin: auto; padding: 22px 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { border: 0; background: transparent; color: #f8fafc; font: 800 22px Manrope,sans-serif; }
+nav { display: flex; flex-wrap: wrap; gap: 5px; }
+nav button, .text-button { border: 0; background: transparent; color: #cbd5e1; padding: 9px 11px; border-radius: 8px; }
+nav button:hover, .text-button:hover { color: #6ee7c1; }
+nav .nav-cta { border: 1px solid #36516a; color: #f8fafc; }
+main { max-width: 1100px; margin: auto; padding: 35px 28px 65px; }
+.hero { text-align: center; padding: 40px 0 20px; }
+.eyebrow { color: #6ee7c1; font-size: 11px; font-weight: 700; letter-spacing: 2px; }
+h1,h2,h3 { font-family: Manrope,sans-serif; }
+.hero h1 { font-size: clamp(52px,8vw,82px); line-height: 1; letter-spacing: -4px; margin: 22px 0; }
+.hero h1 span { color: #6ee7c1; }
+.hero > p { max-width: 580px; margin: auto; color: #a7b4c9; font-size: 17px; line-height: 1.8; }
+.actions { display: flex; justify-content: center; gap: 12px; margin: 28px 0 55px; }
+.primary,.secondary { border-radius: 10px; padding: 12px 18px; border: 1px solid transparent; font-weight: 700; }
+.primary { background: #6ee7c1; color: #092018; }
+.secondary { background: #121d32; border-color: #2b3b55; color: #e5edf8; }
+.cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 15px; text-align: left; }
+.cards article,.panel,.form-panel { border: 1px solid #26344b; border-radius: 16px; background: #101a2c; padding: 24px; }
+.cards b { color: #dce7f7; }
+.cards p,.panel p,.form-panel p { color: #9cabc0; line-height: 1.7; }
+.form-panel { max-width: 470px; margin: 12px auto 45px; }
+.form-panel h1,.panel h1 { margin-top: 5px; }
+form { display: flex; flex-direction: column; gap: 8px; }
+label { margin-top: 10px; font-size: 13px; color: #d2dceb; }
+input,textarea { width: 100%; border: 1px solid #34435a; border-radius: 9px; padding: 12px; background: #0b1323; color: #f8fafc; outline: none; }
+input:focus,textarea:focus { border-color: #6ee7c1; }
+form .primary { margin-top: 15px; }
+.notice { border: 1px solid #355b56; background: #102d2a; color: #a5f3d7 !important; padding: 12px; border-radius: 9px; overflow-wrap: anywhere; }
+.text-button { padding: 0; color: #6ee7c1; }
+.panel { min-height: 260px; }
+.list { display: grid; gap: 12px; margin-top: 20px; }
+.list article { border: 1px solid #293852; border-radius: 12px; padding: 16px; background: #0b1323; }
+.list h3 { margin: 0 0 8px; }
+.list p { margin: 5px 0; }
+.inline-form { max-width: 420px; }
+footer { border-top: 1px solid #1d2a3d; padding: 24px; text-align: center; color: #64748b; font-size: 12px; }
+@media(max-width:720px) { .topbar { align-items: flex-start; flex-direction: column; padding: 18px; } main { padding: 20px 18px 45px; } .cards { grid-template-columns: 1fr; } .actions { flex-direction: column; } }
+.admin-form { max-width: 680px; margin: 12px 0 28px; padding: 18px; border: 1px solid #293852; border-radius: 12px; background: #0b1323; }
+select { width: 100%; border: 1px solid #34435a; border-radius: 9px; padding: 12px; background: #0b1323; color: #f8fafc; }
+.actions.wrap { justify-content: flex-start; flex-wrap: wrap; margin: 15px 0 0; }
+.actions.wrap button,.actions.wrap select { width: auto; }
+.result-card { margin: 14px 0; padding: 18px; border: 1px solid #293852; border-radius: 12px; }
+.result-row { display:flex; justify-content:space-between; gap:12px; padding:12px 0; border-bottom:1px solid #293852; }
+.result-row small { display:block; color:#9cabc0; }
+textarea { min-height: 85px; resize: vertical; }

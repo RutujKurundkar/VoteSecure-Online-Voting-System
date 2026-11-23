@@ -1,0 +1,1 @@
+const express=require('express');const {getActiveElections,listPublishedResults}=require('../controllers/electionController');const auth=require('../middleware/authMiddleware');const router=express.Router();router.get('/active',getActiveElections);router.get('/mine',auth,getActiveElections);router.get('/results',listPublishedResults);module.exports=router;
